@@ -54,7 +54,7 @@ class YWorksURLProvider(Processor):
             fref = urlopen(check_url)
             txt = fref.read()
             fref.close()
-        except BaseException as err:
+        except Exception as err:
             raise ProcessorError("Can't download %s: %s" % (check_url, err))
 
         # Create download link

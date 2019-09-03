@@ -60,7 +60,7 @@ class ETeksURLProvider(Processor):
             fref = urlopen(check_url)
             xmldata = fref.read()
             fref.close()
-        except BaseException as err:
+        except Exception as err:
             raise ProcessorError("Can't download %s: %s" % (check_url, err))
 
         # Create download link

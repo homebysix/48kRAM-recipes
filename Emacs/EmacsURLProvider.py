@@ -46,7 +46,7 @@ class EmacsURLProvider(Processor):
                                                '--silent',
                                                '--location',
                                                check_url))
-        except BaseException as err:
+        except Exception as err:
             raise ProcessorError("Can't download %s: %s" % (check_url, err))
 
         # Grab the first download link of the right type
